@@ -50,7 +50,7 @@ $(".list-group").on("click", "p", function() {
   var text = $(this)
   .text()
   .trim();
-  console.log(this);
+  // console.log(this);
 
   var textInput = $("<textarea>")
   .addClass("form-control")
@@ -66,7 +66,7 @@ $(".list-group").on("blur", "textarea", function(){
   // get the textarea's current values/text
   var text = $(this)
   .val()
-  .trim()
+  .trim();
 
   // get the parent ul's id attribute 
   var status = $(this)
@@ -92,7 +92,7 @@ $(".list-group").on("blur", "textarea", function(){
 });
 
 // due date was clicked
-$(".list-group").on("click","span", function (){
+$(".list-group").on("click", "span", function (){
   // get current text
   var date = $(this)
   .text()
@@ -111,7 +111,7 @@ $(".list-group").on("click","span", function (){
   dateInput.trigger("focus");
 })
 
-$("list-group").on("blur", "input[type='text']", function (){
+$(".list-group").on("blur", "input[type='text']", function (){
 
   // get current text 
   var date = $(this)
