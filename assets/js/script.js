@@ -222,6 +222,7 @@ var auditTask = function(taskEl) {
   else if (Math.abs(moment().diff(time, "days")) <= 2) {
     $(taskEl).addClass("list-group-item-warning");
 }
+
 }
 
 
@@ -306,3 +307,8 @@ $(".list-group").on("change", "input[type='text']", function() {
   // pass task's <li> element into autoTask() to check new due date
   auditTask($(taskSpan).closest(".list-group-item"));
 });
+
+setInterval(function() {
+  $(".card .list-group-item").each(function (el) {
+  });
+}, 1800000);
